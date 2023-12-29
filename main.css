@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+@-webkit-keyframes shadow-drop-2-center {
+    0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+    -webkit-transform: translateZ(50px);
+    transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+@keyframes shadow-drop-2-center {
+    0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+    -webkit-transform: translateZ(50px);
+    transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #047be3;
+    --color2: #3cacfc;
+    --color3: #053574;
+    --color4: #989b6d;
+    --color5: #c9c59b;
+}
+
+
+.index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "contenedor depto1"
+    "contenedor depto2";
+    height: 100vh;
+}
+
+.contenedor{
+    position: relative;
+    grid-area: contenedor;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.inicio {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+    color: #24414a;
+    background-size: cover;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.difuminada{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.difuminada:hover {
+    filter: blur(0);
+}
+
+.depto1{
+    grid-area: depto1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color4);
+    color: transparent;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.material-symbols-outlined{
+    color: var(--color5);
+}
+
+.depto1 .material-symbols-outlined {
+    position: absolute;
+    font-size: 24px;
+    opacity: 1; 
+    visibility: visible; 
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, visibility 0.1s ease-in-out; 
+}
+
+.depto1:hover .material-symbols-outlined {
+    opacity: 0; 
+    visibility: hidden; 
+}
+
+.depto1:hover {
+    color: var(--color5);
+}
+
+.depto2{
+    grid-area: depto2;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    background-color: var(--color5);
+    color:transparent;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.depto2 .material-symbols-outlined {
+    position: absolute;
+    font-size: 24px;
+    opacity: 1; 
+    visibility: visible; 
+    transform: translate(-50%, -50%);
+    transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out; 
+}
+
+.gg{
+    color: var(--color4);
+}
+
+.depto2:hover .material-symbols-outlined {
+    opacity: 0; 
+    visibility: hidden; 
+}
+
+.depto2:hover {
+    color: var(--color4);
+}
+
+
+
+/* PAGINA CENTRAL AV APART */
+
+
+.navega {
+    background-color: var(--color5);
+}
+
+.titulo-principal1{
+    background-image: url(./imagenes/Imagen\ de\ WhatsApp\ 2023-12-28\ a\ las\ 09.45.07_e57d248c.jpg);
+    background-size: contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 8rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 20px;
+}
